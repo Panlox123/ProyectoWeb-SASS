@@ -1,0 +1,323 @@
+html {
+    scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+/* Variables */
+$color-primario: #193347;
+$color-secundario: #294172;
+$color-terciario: #40a1ec;
+$color-fuente: #88aebc;
+$color-fondo: #c3c3c3;
+$background-footer: #294172;
+$padding-general: 20px;
+$margin-general: 10px;
+$fuente-predeterminada: Arial, sans-serif;
+$espaciado-enlaces-navegacion: 15px;
+$alto-header: 70px;
+$ancho-logo: 100px; /* Ajusta el ancho del logo */
+$color-linea: #193347; 
+$alto-linea: 2px; /* Espesor de la línea */
+$margin-linea: 20px 0; /* Margen superior e inferior */
+
+/* Mixin para centrar contenido */
+@mixin centrar-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mixin para tamaño estándar de imágenes y videos */
+@mixin tamaño-media($ancho: 30%) {
+  width: $ancho;
+  margin: $margin-general;
+  display: inline-block;
+}
+
+/* Mixin para fuentes */
+@mixin estilo-fuente($tamaño: 16px, $peso: normal) {
+  font-size: $tamaño;
+  font-weight: $peso;
+  font-family: $fuente-predeterminada;
+}
+
+/* Estilos generales */
+body {
+  @include estilo-fuente(18px);
+  background-color: $color-fondo;
+  color: $color-secundario;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header y Menú de navegación */
+header {
+  background-color: $color-primario;
+  padding: 0 $padding-general;
+  height: $alto-header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0; /* Alinea el header a la parte superior de la ventana */
+  left: 0; /* Alinea el header a la izquierda */
+  right: 0; /* Asegura que el header ocupe el ancho completo */
+  z-index: 100;
+
+  /* Estilos del logo */
+  .logo {
+    img {
+      width: $ancho-logo; /* Ajuste del ancho del logo */
+      height: auto; /* Mantiene la proporción */
+    }
+  }
+
+  /* Estilos del menú de navegación */
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+
+      li {
+        margin-left: $espaciado-enlaces-navegacion;
+
+        a {
+          @include estilo-fuente(16px, bold);
+          color: $color-fuente;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Sección de bienvenida */
+.seccion-inicial {
+    padding: $padding-general;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    h1 {
+      @include estilo-fuente(48px, bold);
+      margin-bottom: $margin-general;
+      color: $color-terciario;
+    }
+  
+    h2 {
+      @include estilo-fuente(24px);
+      margin-bottom: $margin-general;
+      color: $color-secundario;
+      font-weight: bolder;
+    }
+  
+    p {
+      @include estilo-fuente(18px);
+      max-width: 800px;
+      margin-bottom: $margin-general;
+      line-height: 1.8;
+      text-align: justify;
+      color: $color-secundario;
+    }
+  
+    .btn-explorar {
+      background-color: $color-terciario;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      margin-top: $margin-general;
+  
+      &:hover {
+        background-color: darken($color-terciario, 10%);
+      }
+    }
+  }
+  
+/* Estilos principales */
+main {
+  padding: $padding-general;
+
+  h1, h2 {
+    color: $color-primario;
+    text-align: center;
+  }
+
+  h4 {
+    color: $color-terciario;
+    text-align: center;
+  }
+
+  /* Estilos para las imágenes */
+  .imagenes {
+    @include centrar-contenido;
+    flex-wrap: wrap;
+
+    img {
+      @include tamaño-media(30%);
+    }
+  }
+
+  /* Estilos para los videos */
+  .videos {
+    @include centrar-contenido;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    video {
+      @include tamaño-media(40%);
+    }
+  }
+}
+
+/* Sección de Aplicaciones */
+.secciones {
+    padding: $padding-general;
+    padding-top: $alto-header; /* Esto agrega espacio arriba de cada sección */
+    margin-top: -$alto-header;
+
+    .encabezado {
+        text-align: center;
+        margin-bottom: $margin-general;
+    }
+
+    .fila-principal {
+        margin-bottom: $margin-general;
+
+        .descripcion {
+            margin-bottom: $margin-general; /* Espacio entre párrafos */
+        }
+    }
+
+    .fila-secundaria {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+        gap: $margin-general; /* Espacio entre columnas */
+
+        .columna {
+            display: flex;
+            flex-direction: column; /* Apilar imagen y párrafo */
+            align-items: center; /* Cambiado a flex-start para alinear a la izquierda */
+            padding: $padding-general; /* Espaciado interno de las columnas */
+            background-color: $color-primario; /* Fondo claro para las columnas */
+            border-radius: 5px; /* Bordes redondeados */
+
+            .imagenes-aplicaciones {
+                margin-bottom: $margin-general; /* Espacio entre imagen y párrafo */
+                display: flex;
+                width: 100%; /* Asegurar que la imagen ocupe el 100% del ancho de la columna */
+                justify-content: center; /* Centrar horizontalmente */
+                width: 100%; /* Asegurar que el contenedor ocupe el 100% del ancho de la columna */
+                
+                img {
+                    /* Eliminar restricción de tamaño */
+                    width: auto; /* Permitir el tamaño original de la imagen */
+                    height: auto; /* Mantener la proporción original */
+                    max-width: 60%; /* Permitir que la imagen exceda el contenedor */
+                }
+            }
+
+            p {
+                margin: 0; /* Quitar margen del párrafo para que se ajuste bien */
+                margin-top: 1.5em;
+                text-align: justify; /* Para un mejor aspecto visual */
+                color: #88aebc;
+            }
+        }
+    }
+}
+
+/* Estilos para la línea separadora */
+.linea-separadora {
+    border: none; /* Quita el borde predeterminado */
+    height: $alto-linea; /* Altura de la línea */
+    background-color: $color-linea; /* Color de la línea */
+    margin: $margin-linea; /* Margen superior e inferior */
+    width: 100%; /* Ancho completo */
+}
+
+/* Sección de contacto */
+.form-contacto {
+    padding: $padding-general;
+    background-color: $color-fondo;
+    max-width: 600px;
+    margin: 0 auto; /* Centra el formulario en la página */
+  
+    h2 {
+      color: $color-primario;
+      text-align: center;
+      margin-bottom: $margin-general;
+    }
+  
+    p {
+      text-align: center;
+      margin-bottom: $margin-general;
+      color: $color-secundario;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: $margin-general;
+  
+      .form-grupo {
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          font-weight: bold;
+          margin-bottom: 5px;
+          color: $color-primario;
+        }
+  
+        input, textarea {
+          padding: 10px;
+          border-radius: 4px;
+          border: 1px solid $color-secundario;
+          font-size: 16px;
+          font-family: $fuente-predeterminada;
+        }
+  
+        input[type="checkbox"] {
+          width: auto;
+        }
+      }
+  
+      .btn-enviar {
+        background-color: $color-primario;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: center;
+  
+        &:hover {
+          background-color: $color-secundario;
+        }
+      }
+    }
+}  
+
+/* Footer */
+footer {
+  background-color: $background-footer;
+  color: $color-fuente;
+  text-align: center;
+  padding: $padding-general;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,276 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+}
+
+/* Variables */
+/* Ajusta el ancho del logo */
+/* Espesor de la línea */
+/* Margen superior e inferior */
+/* Mixin para centrar contenido */
+/* Mixin para tamaño estándar de imágenes y videos */
+/* Mixin para fuentes */
+/* Estilos generales */
+body {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  background-color: #c3c3c3;
+  color: #294172;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header y Menú de navegación */
+header {
+  background-color: #193347;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0; /* Alinea el header a la parte superior de la ventana */
+  left: 0; /* Alinea el header a la izquierda */
+  right: 0; /* Asegura que el header ocupe el ancho completo */
+  z-index: 100;
+  /* Estilos del logo */
+  /* Estilos del menú de navegación */
+}
+header .logo img {
+  width: 100px; /* Ajuste del ancho del logo */
+  height: auto; /* Mantiene la proporción */
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+header nav ul li {
+  margin-left: 15px;
+}
+header nav ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #88aebc;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sección de bienvenida */
+.seccion-inicial {
+  padding: 20px;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.seccion-inicial h1 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+  color: #40a1ec;
+}
+.seccion-inicial h2 {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+  color: #294172;
+  font-weight: bolder;
+}
+.seccion-inicial p {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  text-align: justify;
+  color: #294172;
+}
+.seccion-inicial .btn-explorar {
+  background-color: #40a1ec;
+  color: white;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.seccion-inicial .btn-explorar:hover {
+  background-color: rgb(22.5285714286, 137.5428571429, 226.4714285714);
+}
+
+/* Estilos principales */
+main {
+  padding: 20px;
+  /* Estilos para las imágenes */
+  /* Estilos para los videos */
+}
+main h1, main h2 {
+  color: #193347;
+  text-align: center;
+}
+main h4 {
+  color: #40a1ec;
+  text-align: center;
+}
+main .imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .imagenes img {
+  width: 30%;
+  margin: 10px;
+  display: inline-block;
+}
+main .videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .videos video {
+  width: 40%;
+  margin: 10px;
+  display: inline-block;
+}
+
+/* Sección de Aplicaciones */
+.secciones {
+  padding: 20px;
+  padding-top: 70px; /* Esto agrega espacio arriba de cada sección */
+  margin-top: -70px;
+}
+.secciones .encabezado {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.secciones .fila-principal {
+  margin-bottom: 10px;
+}
+.secciones .fila-principal .descripcion {
+  margin-bottom: 10px; /* Espacio entre párrafos */
+}
+.secciones .fila-secundaria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 10px; /* Espacio entre columnas */
+}
+.secciones .fila-secundaria .columna {
+  display: flex;
+  flex-direction: column; /* Apilar imagen y párrafo */
+  align-items: center; /* Cambiado a flex-start para alinear a la izquierda */
+  padding: 20px; /* Espaciado interno de las columnas */
+  background-color: #193347; /* Fondo claro para las columnas */
+  border-radius: 5px; /* Bordes redondeados */
+}
+.secciones .fila-secundaria .columna .imagenes-aplicaciones {
+  margin-bottom: 10px; /* Espacio entre imagen y párrafo */
+  display: flex;
+  width: 100%; /* Asegurar que la imagen ocupe el 100% del ancho de la columna */
+  justify-content: center; /* Centrar horizontalmente */
+  width: 100%; /* Asegurar que el contenedor ocupe el 100% del ancho de la columna */
+}
+.secciones .fila-secundaria .columna .imagenes-aplicaciones img {
+  /* Eliminar restricción de tamaño */
+  width: auto; /* Permitir el tamaño original de la imagen */
+  height: auto; /* Mantener la proporción original */
+  max-width: 60%; /* Permitir que la imagen exceda el contenedor */
+}
+.secciones .fila-secundaria .columna p {
+  margin: 0; /* Quitar margen del párrafo para que se ajuste bien */
+  margin-top: 1.5em;
+  text-align: justify; /* Para un mejor aspecto visual */
+  color: #88aebc;
+}
+
+/* Estilos para la línea separadora */
+.linea-separadora {
+  border: none; /* Quita el borde predeterminado */
+  height: 2px; /* Altura de la línea */
+  background-color: #193347; /* Color de la línea */
+  margin: 20px 0; /* Margen superior e inferior */
+  width: 100%; /* Ancho completo */
+}
+
+/* Sección de contacto */
+.form-contacto {
+  padding: 20px;
+  background-color: #c3c3c3;
+  max-width: 600px;
+  margin: 0 auto; /* Centra el formulario en la página */
+}
+.form-contacto h2 {
+  color: #193347;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.form-contacto p {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #294172;
+}
+.form-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-contacto form .form-grupo {
+  display: flex;
+  flex-direction: column;
+}
+.form-contacto form .form-grupo label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #193347;
+}
+.form-contacto form .form-grupo input, .form-contacto form .form-grupo textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #294172;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+.form-contacto form .form-grupo input[type=checkbox] {
+  width: auto;
+}
+.form-contacto form .btn-enviar {
+  background-color: #193347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+}
+.form-contacto form .btn-enviar:hover {
+  background-color: #294172;
+}
+
+/* Footer */
+footer {
+  background-color: #294172;
+  color: #88aebc;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=estilos.css.map */
