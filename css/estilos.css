@@ -1,16 +1,10 @@
 @charset "UTF-8";
+
 html {
   scroll-behavior: smooth; /* Habilita el desplazamiento suave */
 }
 
 /* Variables */
-/* Ajusta el ancho del logo */
-/* Espesor de la línea */
-/* Margen superior e inferior */
-/* Mixin para centrar contenido */
-/* Mixin para tamaño estándar de imágenes y videos */
-/* Mixin para fuentes */
-/* Estilos generales */
 body {
   font-size: 18px;
   font-weight: normal;
