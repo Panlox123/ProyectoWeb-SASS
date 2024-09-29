@@ -1,270 +1,197 @@
 @charset "UTF-8";
-
 html {
-  scroll-behavior: smooth; /* Habilita el desplazamiento suave */
+  scroll-behavior: smooth; /* Habilita el desplazamiento suave en el navegador */
 }
 
-/* Variables */
+/* Variables*/
+/* Color primario utilizado en varios elementos */
+/* Color secundario usado para texto y otros detalles */
+/* Color para botones o títulos */
+/* Color de las fuentes de texto */
+/* Color del fondo */
+/* Color de fondo del footer */
+/* Espaciado interno estándar*/
+/* Margen estándar */
+/* Fuente por defecto */
+/* Espaciado entre enlaces en el menú de navegación */
+/* Altura del header */
+/* Ajusta el ancho del logo */
+/* Color de las líneas separadoras */
+/* Mixin para centrar horizontal y verticalmente el contenido */
+/* Mixin para ajustar el tamaño de imágenes y videos */
+/* Mixin para aplicar estilo a las fuentes */
+/* Estilos generales */
 body {
-  font-size: 18px;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-  background-color: #c3c3c3;
-  color: #294172;
-  margin: 0;
-  padding: 0;
+  font-size: 18px; /* Tamaño de la fuente, valor predeterminado de 16px */
+  font-weight: normal; /* Peso de la fuente, predeterminado como normal */
+  font-family: Arial, sans-serif; /* Aplica la fuente predeterminada (Arial) */
+  /* Aplica la fuente predeterminada con un tamaño de 18px */
+  background-color: #c3c3c3; /* Color de fondo */
+  color: #294172; /* Color del texto */
+  margin: 0; /* Elimina el margen predeterminado del navegador */
+  padding: 0; /* Elimina el padding predeterminado */
 }
 
-/* Header y Menú de navegación */
+/* Header y menú de navegación */
 header {
-  background-color: #193347;
-  padding: 0 20px;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0; /* Alinea el header a la parte superior de la ventana */
-  left: 0; /* Alinea el header a la izquierda */
-  right: 0; /* Asegura que el header ocupe el ancho completo */
-  z-index: 100;
-  /* Estilos del logo */
-  /* Estilos del menú de navegación */
+  background-color: #193347; /* Aplica el color primario al fondo del header */
+  padding: 0 20px; /* Aplica padding horizontal del valor general */
+  height: 70px; /* Define la altura del header */
+  display: flex; /* Flexbox para organizar el contenido horizontalmente */
+  justify-content: space-between; /* Espacia los elementos hacia los extremos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0; /* Posiciona el header en la parte superior, ocupando todo el ancho */
+  z-index: 100; /* Eleva el header sobre otros elementos */
 }
 header .logo img {
-  width: 100px; /* Ajuste del ancho del logo */
-  height: auto; /* Mantiene la proporción */
+  width: 100px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantiene la proporción original del logo */
 }
 header nav ul {
-  list-style: none;
+  list-style: none; /* Elimina las viñetas de la lista */
   margin: 0;
-  padding: 0;
-  display: flex;
+  padding: 0; /* Elimina los márgenes y el padding */
+  display: flex; /* Flexbox para organizar los elementos del menú horizontalmente */
 }
 header nav ul li {
-  margin-left: 15px;
+  margin-left: 15px; /* Aplica espaciado entre enlaces */
 }
 header nav ul li a {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  color: #88aebc;
-  text-decoration: none;
+  font-size: 16px; /* Tamaño de la fuente, valor predeterminado de 16px */
+  font-weight: bold; /* Peso de la fuente, predeterminado como normal */
+  font-family: Arial, sans-serif; /* Aplica la fuente predeterminada (Arial) */
+  /* Fuente de 16px y en negrita */
+  color: #88aebc; /* Aplica color a los enlaces */
+  text-decoration: none; /* Elimina subrayado de los enlaces */
 }
 header nav ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subraya los enlaces al pasar el mouse */
 }
 
 /* Sección de bienvenida */
 .seccion-inicial {
-  padding: 20px;
-  height: auto;
-  text-align: center;
+  padding: 20px; /* Padding general */
+  height: auto; /* Altura automática */
+  text-align: center; /* Alineación centrada del texto */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Centrado vertical y horizontal usando flexbox */
 }
 .seccion-inicial h1 {
-  font-size: 48px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
-  margin-bottom: 10px;
-  color: #40a1ec;
+  font-size: 48px; /* Tamaño de la fuente, valor predeterminado de 16px */
+  font-weight: bold; /* Peso de la fuente, predeterminado como normal */
+  font-family: Arial, sans-serif; /* Aplica la fuente predeterminada (Arial) */
+  /* Fuente grande y negrita */
+  margin-bottom: 10px; /* Margen inferior */
+  color: #40a1ec; /* Aplica el color terciario */
 }
 .seccion-inicial h2 {
-  font-size: 24px;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-  margin-bottom: 10px;
-  color: #294172;
-  font-weight: bolder;
+  font-size: 24px; /* Tamaño de la fuente, valor predeterminado de 16px */
+  font-weight: normal; /* Peso de la fuente, predeterminado como normal */
+  font-family: Arial, sans-serif; /* Aplica la fuente predeterminada (Arial) */
+  /* Fuente más pequeña que el h1 */
+  margin-bottom: 10px; /* Margen inferior */
+  color: #294172; /* Color secundario */
+  font-weight: bolder; /* Fuente aún más gruesa */
 }
 .seccion-inicial p {
-  font-size: 18px;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin-bottom: 10px;
-  line-height: 1.8;
-  text-align: justify;
-  color: #294172;
+  font-size: 18px; /* Tamaño de la fuente, valor predeterminado de 16px */
+  font-weight: normal; /* Peso de la fuente, predeterminado como normal */
+  font-family: Arial, sans-serif; /* Aplica la fuente predeterminada (Arial) */
+  /* Fuente de 18px */
+  max-width: 800px; /* Limita el ancho máximo del párrafo */
+  margin-bottom: 10px; /* Margen inferior */
+  line-height: 1.8; /* Altura de línea para mejorar la legibilidad */
+  text-align: justify; /* Alineación justificada del texto */
+  color: #294172; /* Aplica color secundario al texto */
 }
 .seccion-inicial .btn-explorar {
-  background-color: #40a1ec;
-  color: white;
-  padding: 15px 30px;
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-  margin-top: 10px;
+  background-color: #40a1ec; /* Color de fondo del botón */
+  color: white; /* Texto blanco */
+  padding: 15px 30px; /* Espaciado interno del botón */
+  font-size: 20px; /* Tamaño de la fuente del botón */
+  border: none; /* Elimina bordes predeterminados */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin-top: 10px; /* Margen superior */
 }
 .seccion-inicial .btn-explorar:hover {
-  background-color: rgb(22.5285714286, 137.5428571429, 226.4714285714);
+  background-color: rgb(22.5285714286, 137.5428571429, 226.4714285714); /* Oscurece el color del botón al pasar el mouse */
 }
 
 /* Estilos principales */
 main {
-  padding: 20px;
-  /* Estilos para las imágenes */
-  /* Estilos para los videos */
+  padding: 20px; /* Aplica padding general */
 }
 main h1, main h2 {
-  color: #193347;
-  text-align: center;
+  color: #193347; /* Aplica color primario a los títulos */
+  text-align: center; /* Alinea los títulos al centro */
 }
 main h4 {
-  color: #40a1ec;
+  color: #40a1ec; /* Color terciario para títulos menores */
   text-align: center;
 }
 main .imagenes {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* Centra las imágenes */
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples líneas */
 }
 main .imagenes img {
-  width: 30%;
-  margin: 10px;
-  display: inline-block;
+  width: 30%; /* Define el ancho según el valor proporcionado o el predeterminado */
+  margin: 10px; /* Aplica margen general */
+  display: inline-block; /* Muestra elementos en línea pero permite ajustar dimensiones */
+  /* Aplica el tamaño estándar para imágenes */
 }
 main .videos {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  /* Centra los videos */
+  flex-wrap: wrap; /* Videos en múltiples líneas */
+  gap: 20px; /* Espacio entre los videos */
 }
 main .videos video {
-  width: 40%;
-  margin: 10px;
-  display: inline-block;
+  width: 40%; /* Define el ancho según el valor proporcionado o el predeterminado */
+  margin: 10px; /* Aplica margen general */
+  display: inline-block; /* Muestra elementos en línea pero permite ajustar dimensiones */
+  /* Aplica un ancho mayor para los videos */
 }
 
 /* Sección de Aplicaciones */
 .secciones {
-  padding: 20px;
-  padding-top: 70px; /* Esto agrega espacio arriba de cada sección */
-  margin-top: -70px;
+  padding: 20px; /* Padding general */
+  padding-top: 70px; /* Agrega espacio arriba */
+  margin-top: -70px; /* Ajusta el margen superior */
 }
 .secciones .encabezado {
-  text-align: center;
-  margin-bottom: 10px;
+  text-align: center; /* Alinea el encabezado al centro */
+  margin-bottom: 10px; /* Margen inferior */
 }
 .secciones .fila-principal {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Margen inferior */
 }
 .secciones .fila-principal .descripcion {
-  margin-bottom: 10px; /* Espacio entre párrafos */
+  margin-bottom: 10px; /* Margen inferior para descripciones */
 }
 .secciones .fila-secundaria {
-  display: grid;
+  display: grid; /* Aplica un diseño de cuadrícula */
   grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-  gap: 10px; /* Espacio entre columnas */
+  gap: 10px; /* Espaciado entre columnas */
 }
 .secciones .fila-secundaria .columna {
   display: flex;
-  flex-direction: column; /* Apilar imagen y párrafo */
-  align-items: center; /* Cambiado a flex-start para alinear a la izquierda */
-  padding: 20px; /* Espaciado interno de las columnas */
-  background-color: #193347; /* Fondo claro para las columnas */
+  flex-direction: column; /* Organiza en columnas */
+  align-items: center; /* Centra horizontalmente */
+  padding: 20px; /* Aplica padding interno */
+  background-color: #193347; /* Fondo color primario */
   border-radius: 5px; /* Bordes redondeados */
-}
-.secciones .fila-secundaria .columna .imagenes-aplicaciones {
-  margin-bottom: 10px; /* Espacio entre imagen y párrafo */
-  display: flex;
-  width: 100%; /* Asegurar que la imagen ocupe el 100% del ancho de la columna */
-  justify-content: center; /* Centrar horizontalmente */
-  width: 100%; /* Asegurar que el contenedor ocupe el 100% del ancho de la columna */
-}
-.secciones .fila-secundaria .columna .imagenes-aplicaciones img {
-  /* Eliminar restricción de tamaño */
-  width: auto; /* Permitir el tamaño original de la imagen */
-  height: auto; /* Mantener la proporción original */
-  max-width: 60%; /* Permitir que la imagen exceda el contenedor */
-}
-.secciones .fila-secundaria .columna p {
-  margin: 0; /* Quitar margen del párrafo para que se ajuste bien */
-  margin-top: 1.5em;
-  text-align: justify; /* Para un mejor aspecto visual */
-  color: #88aebc;
-}
-
-/* Estilos para la línea separadora */
-.linea-separadora {
-  border: none; /* Quita el borde predeterminado */
-  height: 2px; /* Altura de la línea */
-  background-color: #193347; /* Color de la línea */
-  margin: 20px 0; /* Margen superior e inferior */
-  width: 100%; /* Ancho completo */
-}
-
-/* Sección de contacto */
-.form-contacto {
-  padding: 20px;
-  background-color: #c3c3c3;
-  max-width: 600px;
-  margin: 0 auto; /* Centra el formulario en la página */
-}
-.form-contacto h2 {
-  color: #193347;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.form-contacto p {
-  text-align: center;
-  margin-bottom: 10px;
-  color: #294172;
-}
-.form-contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.form-contacto form .form-grupo {
-  display: flex;
-  flex-direction: column;
-}
-.form-contacto form .form-grupo label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #193347;
-}
-.form-contacto form .form-grupo input, .form-contacto form .form-grupo textarea {
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #294172;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-}
-.form-contacto form .form-grupo input[type=checkbox] {
-  width: auto;
-}
-.form-contacto form .btn-enviar {
-  background-color: #193347;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  text-align: center;
-}
-.form-contacto form .btn-enviar:hover {
-  background-color: #294172;
-}
-
-/* Footer */
-footer {
-  background-color: #294172;
-  color: #88aebc;
-  text-align: center;
-  padding: 20px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
 /*# sourceMappingURL=estilos.css.map */
